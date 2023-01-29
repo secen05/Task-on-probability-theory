@@ -1,0 +1,54 @@
+print("Задание 1")
+def mean_and_variance(a,b):
+    return f'На промежутке ({a};{b}]\nСреднее значение: М(А) = {(a+b)/2}\nДисперсия: D(A) = {((b-a)**2)/12}'
+print(mean_and_variance(200,800))
+
+print("Задание 2")
+b=0.5+2.4**(1/2)
+print(f'Левая граница распределения b = {b}\n'f'Среднее значение  M(B) = {(b+0.5)/2}')
+
+print("Задание 4")
+def a_value(height):
+    return (height-174)/8
+from statistics import NormalDist
+#1) Определим a-значениe:
+print("Определим а-значение", a_value(182))
+#P(X>=182)
+print(1-NormalDist().cdf(a_value(182)))
+#2) Определим a-значениe:
+print("Определим а-значение", a_value(190))
+#P(X>=190)
+print(1-NormalDist().cdf(a_value(190)))
+#3) Определим значениz a1 и a2:
+a1=a_value(166)
+a2=a_value(190)
+#P(166<=X<=190)
+print(NormalDist().cdf(a2)-NormalDist().cdf(a1))
+#4) Определим значениz a1 и a2:
+a1=a_value(166)
+a2=a_value(182)
+#P(166<=X<=182)
+print(NormalDist().cdf(a2)-NormalDist().cdf(a1))
+#5) Определим значениz a1 и a2:
+a1=a_value(158)
+a2=a_value(190)
+#P(158<=X<=190)
+print(NormalDist().cdf(a2)-NormalDist().cdf(a1))
+#6) Определим значениz a1 и a2:
+a1=a_value(150)
+a2=a_value(190)
+#P(150<=X<=190)
+print(NormalDist().cdf(a2)-NormalDist().cdf(a1))
+#7) Определим значениz a1 и a2:
+a1=a_value(150)
+a2=a_value(198)
+#P(150<=X<=198)
+print(NormalDist().cdf(a2)-NormalDist().cdf(a1))
+#8)Определим a-значениe:
+print("Определим а-значение", a_value(1166))
+#P(X<=166)
+print(NormalDist().cdf(a_value(166)))
+print("Задание 5")
+Z=(190-178)/25**(1/2)
+print(Z)
+print("Дополнительное задание")
